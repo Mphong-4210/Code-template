@@ -11,7 +11,22 @@ using namespace std;
 #define fi first
 #define se second
 #define pb push_back
-#define mp ios::sync_with_stdio(false);cin.tie(nullptr);
+
+void mp(){
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+}
+
+void ffopen(string name){
+    string inFile=name + ".inp";
+    string outFile=name + ".out";
+    if(FILE* f = fopen(inFile.c_str(), "r")){
+        fclose(f);
+        freopen(inFile.c_str(), "r", stdin);
+        freopen(outFile.c_str(), "w", stdout);
+    }
+}
 
 const int maxn=1e6+42;
 const int N=1e3;
@@ -24,8 +39,7 @@ void solve(){
 }
 
 int main(){
-    //freopen("DAUNGOAC.INP","r",stdin);
-    //freopen("DAUNGOAC.OUT","w",stdout);
-    mp
+    //ffopen("filename");
+    mp();
     solve();
 }
